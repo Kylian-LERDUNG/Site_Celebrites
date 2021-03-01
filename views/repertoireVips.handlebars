@@ -1,0 +1,16 @@
+{{> initialeVIP }}
+{{#each stars}}
+  <p><img class="imgvip" src="/images/vip/{{this.img}}" title='{{this.com}}' alt="image du vip"></p>
+  <p ><a href="/descriptionVIP/{{this.numero}}">{{this.prenom}} {{this.nom}}</a></p>
+{{/each}}
+
+{{#each detailVIP}}
+  <p><img class="imgvip" src="/images/vip/{{this.img}}"></p>
+  <p>Nom : {{this.prenom}} {{this.nom}}</p>
+  <br/>
+  <p>Naissance : {{formatDate this.naissance 'dddd D MMMM YYYY'}}</p>
+  <br/>
+  <p>Nationalite : {{this.nationalite}}</p>
+  <br/>
+  <br/>
+{{/each}}
